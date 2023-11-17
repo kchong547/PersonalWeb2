@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset='UTF-8' />
+        <title>Katherine's Personal Webpage</title>
+        <link  rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@200..900' />
+        <link rel='stylesheet' href='styles.css' />
+    </head>
+
+    <body>
+        <div class='navigation nav-home'> 
+            <!-- navigation menu -->
+            <ul class='menu'>
+                <li><a class='nav-link' href='index.html'>Home</a></li>
+                <li><a class='nav-link' href='#intro'>Intro</a></li>
+                <li><a class='nav-link' href='projects.html'>Projects</a></li>
+                <li><a class='nav-link' href='hobbies.html'>Hobbies</a></li>
+                <li><a class='nav-link' href='how_made.html'>How it was made</a></li>
+            </ul>
+        </div>
+        
+        <div class='header-container'>
+            <div class='curtain-horizontal-l animation-open-l'></div>
+            <div class='curtain-horizontal-r animation-open-r'></div>
+            <div class='curtain-vertical-t animation-open-t'></div>
+            <div class='curtain-vertical-b animation-open-b'></div>
+
+            <div class='header'>
+                <div class='header-content-container home-header-bkg header-text'>
+                    <span><h1 class='header-content'></h1></span>
+                    <span class='input-cursor'></span>
+                </div>
+               
+            </div>
+
+        </div>
+
+        <div id='intro' class='content'>
+            <h2>Who am I?</h2>
+            <div class='split-view-center'>
+                <div class='split-content'>
+                    <img class= 'split-img rounded' src='images/me.jpg'/>
+                </div>
+
+                <div class='split-content'>
+                    <p class="small_content">
+                        My name is Katherine and I'm happy our paths are crossing even for a brief moment. 
+                    </p>
+
+                    <p class='small_content'>
+                        In 2022, I finished pursuing my Bachelor or Science in Computer Science at the University of California, Los Angeles (UCLA).
+                    </p>
+                    <p class='medium_content'>
+                        Though I've taken a small break from software development, I'm coming back into the scene with a fresh mind and a newfound interest 
+                        in the technological world. I find it very hard to escape from my love for creating and being involved in imaginative processes; 
+                        what better place to grow and challenge myself than in tech? I've made the most out of this period of my life and come back a much 
+                        more motivated and stronger individual. I cannot wait to let my tenacity and curiosity shine through in the next things to come.
+                    </p>
+                    <p class='small_content'>
+                        Currently, I'm interested in full-stack development. No matter what I do, I will always be happiest when I blend my creative abilities 
+                        and my interested in tech together to create something new and exciting!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class='dark light-text'>
+            <div class='content'>
+                <h2>What have I been up to?</h2>
+
+                <div class='carousel_container'>
+                    <div class='carousel'>
+                        <button class="carousel_button carousel_button_left is_hidden"><img src='images/triangle_backwards.svg'></button>
+        
+                        <div class='carousel_track_container'>
+                            <ul class="carousel_track transition">
+                                <li class='carousel_slide rounded current_slide'>
+                                    <div class='carousel_content light-text'>
+                                        <img class='carousel_img' src='images/dio-white-transp.svg'/>
+                                        <p>At Dio technologies, I worked as a Business Development Intern from June 2021 to April 2022. </p>
+                                        <ul>
+                                            <li>Ideated, designed, and developed 5 web pages for improved user experience with HTML, CSS, JavaScript, WordPress, and Figma</li>
+                                            <li>Spearheaded technical initiatives for company branding, website redesign, and search engine optimization</li>
+                                            <li>Optimized data analytics for website traffic using Google Analytics and Tag Manager to improve website conversion rate</li>
+                                            <li>Analyzed website data and user journey mapping from A/B testing campaign where over 360 people participated to test interest in minimum viable product, prioritize improvements on website, and finalize product pricing</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class='carousel_slide rounded'>
+                                    <div class='carousel_content'>
+                                        <p><span class='carousel_title'>NBranch Consulting</span></p>
+                                        <p>NBranch Consulting gave me the opportunity the work as a Software Engineering Intern from June 2021 to August 2021.</p>
+                                        <ul>
+                                            <li>Developed email marketing service to help campaigns target customized client lists using Django framework with Python, JavaScript, HTML, CSS, and SQLite</li>
+                                            <li>Created dual list box widget with dynamic search bar which leveraged REST API, databases, and form handling to improve filtering and selecting email lists for users</li>
+                                            <li>Constructed email filter functionality to allow for personalized customer interaction and improved marketing</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class='carousel_slide rounded'>
+                                    <div class='carousel_content'>
+                                        <img class='carousel_img' src='images/nasa-logo.svg'/>
+                                        <p>For a class project, I worked with 4 other students to deploy a configurable, scalable webserver written in C++. We worked for 10 weeks to create various request handlers and interacted with NASA Open API to display daily astronomy information. Here are a few things that I worked on:</p>
+                                        <ul>
+                                            <li>Programmed API for handler that managed user requests for data from NASA Open API and utilized functionalities of other developed handlers through NGINX file parser</li>
+                                            <li>Assembled CRUD and static file handler that stored user comments and helped manage content extracted from JSON data</li>
+                                            <li>Administered thorough testing of webserver through unit and integration test with 80% code coverage</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class='carousel_slide rounded'>
+                                    <div class='carousel_content'>
+                                        <img class='carousel_img' src='images/blog.svg'/>
+                                        <p>A small project that I worked on to get a better understanding of how to utilize dynamic databases in a real life setting.</p>
+                                        <ul>
+                                            <li>Implemented markdown-based blogging service where users can log in and maintain blog posts in Docker container</li>
+                                            <li>Developed REST API with NodeJS, Express, and MongoDB to save, retrieve, update, and delete posts from the server</li>
+                                            <li>Programmed front-end single page application using Angular while utilizing key-based endpoints</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class='carousel_slide rounded'>
+                                    <div class='carousel_content'>
+                                        <img class='carousel_img' src='images/Spotify_Logo_CMYK_Green.svg'/>
+                                        <p>One easy way to start a conversation with me is to talk about music. I wanted to create a small application 
+                                            that would let visitors to my website see how close their music taste was to mine and any artists that we share. 
+                                            This would be done by utilizing the Spotify API. It's still a work in progress but it's coming along!
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <button class="carousel_button carousel_button_right"><img src='images/triangle_forwards.svg'></button>
+                    </div>
+        
+                    <div class='carousel_bottom'>
+                        <div class ='carousel_nav_container carousel_nav_animation'>
+                            <div class='carousel_nav'>
+                                <button class='carousel_indicator current_slide'></button>
+                                <button class='carousel_indicator'></button>
+                                <button class='carousel_indicator'></button>
+                                <button class='carousel_indicator'></button>
+                                <button class='carousel_indicator'></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='content'>
+                <h2>Leading the change</h2>
+
+                <img class='rounded fill-image' src='images/exploretech.jpg'/>
+
+                <div class='split-view'>
+                    <div class='split-content'>
+                        <img class='logos centered' src='images/acm-logo.svg'/>
+                        <h3>Association of Computing Machinery</h3>
+                        <p class='small_content'><a class='dark-link' href='uclaacm.com'>ACM at UCLA</a> is the largest computer science student organization at UCLA consisting of 8
+                            subcommittees that each focus on a different topic related to tech and computer science, such as cybersecurity, diversity in tech, and artificial intelligence.
+                        </p>
+                        <div class='large_content'>
+                            <p>
+                                I served as the <span class='strong'>External Vice President</span> to the board overlooking the entire organzation during the 2020-2021 term. 
+                            </p>
+
+                            <p>Here is a brief list of my responsibilities:</p>
+                            
+                            <ul class='small_text'>
+                                <li>Maintained marketing strategies, social media, finances, corporate relations, and cross-organization partnerships along with my 
+                                    8 person team.</li>
+                                <li>Communicated with corporate representatives and recruiters from companies such as Google, Meta, and much more.</li>
+                                <li>Incorporated new diversity and inclusion discussion in annual CS Town Hall, where students and faculty discussed ways 
+                                    to improve the CS curriculum and better support the student body.</li>
+                                <li>Designed and lobbied for a cost-friendly sponsorship tier dedicated for start-ups for the UCLA CS Department Affiliates Program.</li>
+                                <li>Oversaw initiatives from 8 committees, including new branding guidelines for the organization.</li>
+                                <li>Worked with Moonshots initiative to foster diversity and inclusion awareness and implement new, student-led ideas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class='split-content'>
+                        <img class='logos centered' src='images/exploretech-logo.svg'/>
+                        <h3>exploretech.la</h3>
+                        <p class='small_content'><a class='dark-link' href='exploretech.la'>exploretech.la</a> is a student-led organization that aims to expose underserved Title 1 high school students in LAUSD to opportunities in technology. 
+                            This organization hosts an annual, day-long outreach event full of panels, workshops, and interactive activities for students to take part in.
+                        </p>
+                        
+                        <div class='medium_content'>
+                            <p>In 2019-2020, this is what I accomplished as <span class='strong'>External Director</span>: </p>
+
+                            <ul class='small_text'>
+                                <li>Led a team of 4 that handled corporate partnerships, finances, marketing, and high school outreach.</li>
+                                <li>Secured over $17,000 in funding via UCLA funding applications, corporate sponsorships, and department budgeting, 
+                                    leading to a ~55% in budget.</li>
+                                <li> Established partnerships with companies such as Microsoft, Google, Capcom, and more.</li>
+                                <li>Gathered over 200 students to attend the event.</li>
+                            </ul>
+
+                            <p>From 2020-2022, I created and ran workshops on these topics:</p>
+                            <ul class='small_text'>
+                                <li>Game Development</li>
+                                <li>AR/VR</li>
+                                <li>UI/UX</li>
+                                <li>Python Turtles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='content img_bkg_section'>
+
+            <div><img class='img_bkg_left' src='images/cloudy_blur.png'/></div>
+            <h2>Hobbies & Interests</h2>
+
+            <div class='split-view'>
+                <div class='split-content dark-text-bg light-text rounded'>
+                    <p class='small_content'>Whenever I'm not honing my technological skills, I pass the time by unwinding with my hobbies.</p>
+
+                    <p class='small_content'>Drawing is one of my favorite pastimes. I often sketch out designs of characters that are influenced by the music I listen to.
+                    </p>
+
+                    <p class='small_content'> Some of my other hobbies and interests include: clay crafting, listening to music, reading, and playing video games.
+                    </p>
+
+                    <p class='small_content'>If you want to learn more about who I am as a person, <a class='dark-link' href='hobbies.html'>check out the Hobbies page!</a></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class='dark light-text'>
+            <div class='content footer'>
+                <h2>Thanks for visiting!</h2>
+
+                <p class='small_content'>I hope you enjoyed your time here, no matter how brief it was.</p>
+
+                <p class='small_content'>If you like what you see and want to learn more about me be sure to check out the other pages in the navigation bar above!</p>
+                <p class='small_content'>If you want to know more about my thought processes and how this page was made, I'm currently working on a "How it was made" page just for that.
+                    Thank you for your patience and understanding!
+                </p>
+            </div>
+        </div>
+
+        <script src='script_home.js'></script>
+        <script src='script_text_observers.js'></script>
+
+
+    </body>
+
+</html>

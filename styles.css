@@ -1,0 +1,660 @@
+/* =============================== Page-Wide Styling =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes it so that explicit width/height dimensions automatically add padding and border, not just content*/
+}
+
+.site-container {
+    margin: 0px auto;
+    width: 80%;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #30413B;
+
+    background-color: #FDFDFD;
+    overflow-x: hidden;
+}
+
+/* =============================== General =============================== */
+h2 {
+    font-size: 45px;
+    font-weight: 600;
+    padding-top: 100px;
+    padding-bottom: 1.2em;
+    z-index: 1;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 1em 0;
+}
+
+p {
+    margin-bottom: 1.2em;
+}
+
+.content {
+    /*padding: 0 20%;*/
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.rounded{
+    border-radius: 15px;
+}
+
+ul {
+    list-style-position:outside;
+
+    /*include the bullet in the padding*/
+    padding-left: 2em;
+}
+
+li {
+    margin-bottom: .5em;
+}
+
+ul >li:last-of-type {
+    margin-bottom: 1em;
+}
+
+.centered {
+    margin: 0 auto; /* object will sit evenly within its parent container!*/
+}
+
+.dashed-dark {
+    height: 1px;
+    border: 0;
+    border-top: 3px dashed #30413B;
+}
+
+.dashed-light {
+    height: 1px;
+    border: 0;
+    border-top: 3px dashed #FDFDFD;
+}
+
+.dark {
+    background-color: #30413B;
+    /*break out of parent width setting/go back to full width*/
+    width:100vw;
+    margin-left: calc(50% - 50vw);
+}
+.dark-text-bg {
+    padding: 15px;
+    opacity: 80%;
+    background: #0D201B;
+}
+
+.gray {
+    background-color: #f7f9fb;
+    margin-left: calc(50% - 50vw);
+}
+
+.light-text {
+    color: #FDFDFD;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.small_text
+{
+    font-size: 16px;
+}
+
+.blur-edge {
+    box-shadow: 0 0 50px 50px white inset;
+}
+
+/* =============================== navigation menu =============================== */
+.navigation {
+    border-bottom: solid 1px #c8cace;
+    position: fixed; /* keeps navi bar at the top of the page but out of the format of the page*/
+    display: flex;
+    justify-content: space-between;
+    opacity: 95%;
+
+    width: 100%;
+    height: 3em;
+    background: #FDFDFD;
+
+    transition: 0.4s;
+    overflow: hidden;
+    top:0;
+    z-index:99;
+}
+
+.nav-home {
+    height: 0;
+}
+
+.menu {
+    margin: auto 0; /*align vertically*/
+    padding: 0 15%;
+}
+
+.menu > li {
+    display: inline; /*makes it so each menu item becomes inline rather than box type*/
+    margin-right: 50px;
+}
+.menu > li:last-of-type {
+    margin-right: 0;
+}
+
+/* ======================================== Home Page ======================================= */
+/* =============================== Header =============================== */
+.header-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.header {
+    background-color:transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    margin: 0 auto;
+
+    width: 85%;
+    height: 100%;
+    z-index:0;
+}
+
+.header-content-container {
+    padding: 45% 0 0 15%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: fit-content;
+    max-height:fit-content;
+}
+
+.header-text {
+    font-size: 54px;
+    font-weight: 650;
+    color: #FDFDFD;
+    background-color:transparent;
+}
+
+.header-content {
+    margin: 0;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 125px;
+    background-color: #FDFDFD;
+    margin-left: 8px;
+
+    animation: blink .4s linear infinite alternate;
+
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+
+/*wildcard selector*/
+[class *= "curtain"]
+{
+    background-color: #FDFDFD;
+    position: absolute;
+    
+}
+
+[class *= "curtain-horizontal"]
+{
+    height: 100%;
+    width: 50%;
+    top: 0;
+    z-index: 2;
+
+}
+
+.curtain-horizontal-l {
+    left: 50%;
+}
+
+.curtain-horizontal-r {
+    left: 0%;
+}
+
+[class *= "curtain-vertical"]
+{
+    height: 49.5%;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+
+}
+
+.curtain-vertical-t {
+    top: 0%;
+}
+
+.curtain-vertical-b {
+    top: 50.5%;
+}
+
+.animation-open-l {
+    animation: open_left;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.animation-open-r {
+    animation: open_right;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.animation-open-t {
+    animation: open_top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.3s;
+}
+
+.animation-open-b {
+    animation: open_bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.3s;
+}
+
+@keyframes open_left {
+    0% {transform: translateX(0%);}
+    20% {transform: translateX(10%);}
+    25% {transform: translateX(10%);}
+    100% {transform:translateX(100%);}
+}
+
+@keyframes open_right {
+    0% {transform: translateX(0%);}
+    20% {transform: translateX(-10%);}
+    25% {transform: translateX(-10%);}
+    100% {transform:translateX(-100%);}
+}
+
+@keyframes open_top {
+    0% {transform: translateY(0%);}
+    100% {transform:translateY(-100%);}
+}
+
+@keyframes open_bottom {
+    0% {transform: translateY(0%);}
+    100% {transform:translateY(100%);}
+}
+
+/* =============================== split window content style =============================== */
+.split-view {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.split-view-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.split-content {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+/*
+@media only screen and (min-width: ) {
+    .split-img {
+        max-width: 45%;
+        height:auto; 
+     }
+}
+*/
+.split-img {
+    width: 80%;
+    height:auto; 
+    margin: 0 auto;
+ }
+
+.split-content > h3 {
+    text-align: center;
+}
+
+.logos {
+    height:150px;
+    width: 150px;
+}
+
+.fill-image {
+    width: 100%;
+}
+
+.img_bkg_section {
+    position: relative;
+
+}
+
+.img_bkg_left {
+    position: absolute;
+    height: 100%;
+    left:50%;
+}
+
+.img_bkg_right {
+    position: absolute;
+    max-height: 100%;
+    right:50%;
+    z-index: 1;
+}
+
+/* =============================== footer style =============================== */
+.footer {
+    margin-bottom: 0px;
+}
+
+/* =============================== link style =============================== */
+.nav-link:link, .nav-link:visited {
+    color: #30413B;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #E8A217;
+    text-decoration: none;
+}
+
+.dark-link:link, .dark-link:visited { 
+    color: #E8A217;
+}
+
+a:hover, .dark-link:hover, .nav-link:hover {
+    color: #E8A217;
+    text-decoration: underline;
+}
+
+/* =============================== Carousel Styling =============================== */
+/*
+.carousel_container{
+    padding:150px 0;
+}
+*/
+
+.carousel {
+    position: relative; /*not sure if needed*/
+    height: 600px;
+    margin: 0 auto;
+}
+
+.carousel_content {
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 75px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+.carousel_img {
+    max-width: fit-content;
+    margin-bottom: 1.5em;
+}
+
+.carousel_track_container {
+    /*background: #020505;*/
+    height: 100%;
+    position: relative; /*position the slides into the container*/
+    overflow: hidden; /*hides content that flows outside of the container i.e. extra slides*/
+}
+
+.carousel_track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    position: relative;
+    height: 100%; /*prevents slide within from shrinking to 0*/
+}
+
+.transition {
+    transition: transform ease-out; /*slide transition animation*/
+    transition-duration: .60s;
+}
+
+.carousel_slide {
+    position: absolute; /*so that the panels stack on top of eachother but itll change*/
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: #141C1B;
+
+    display: flex;
+    justify-content:center;
+
+}
+
+.carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /*since top:50% will move the button down 50% down its parent container but the button will start at the halfway mark, we use this to shift the button up 50% of ITS SIZE so that the middle of the button  is aligned with the middle of the page*/
+
+    /*when adding an image*/
+    background: transparent;
+    border: 0;
+
+    cursor: pointer; /*changes cursor to make it obviously clickable*/
+}
+
+.carousel_button_left {
+    left:-100px;
+}
+
+.carousel_button_right {
+    right:-100px;
+}
+
+.carousel_button > img {
+    width: 50%;
+}
+
+
+.carousel_bottom {
+    position: fixed;
+    bottom: 05%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel_nav_container {
+    width: 0%;
+}
+
+.carousel_nav {
+    background: #427966;
+    /*center within parent*/
+    margin: 0;
+    /*center children*/
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.carousel_indicator {
+    border: 0;
+    border-radius: 50%; /*make them circles*/
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.3);
+    margin:0 12px;
+
+    cursor: pointer;
+}
+
+.carousel_indicator.current_slide {
+    background: #FDDFB1;
+}
+
+/*https://stackoverflow.com/questions/53623837/css-animation-to-expand-div-from-center-outwards*/
+.carousel_nav_animation {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s all;
+}
+
+.carousel_title {
+    font-size: 65px;
+    font-weight: 600;
+}
+
+.is_hidden {
+    display: none;
+}
+
+/* =============================== Fade-in animation for text =============================== */
+.small_content, .medium_content, .large_content {
+    opacity: 0;
+}
+
+.content_anim {
+    animation: fade_in, move_up;
+    animation-duration: .5s, .5s;
+    animation-fill-mode: forwards, forwards;
+    /*animation-keyframe-name animation-duration animation-timing-function*/
+}
+
+@keyframes fade_in {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes move_up {
+    0% {transform: translate(0,  15px);}
+    100% {transform: translate(0,  0px);}
+}
+
+
+/* ======================================== Projects Page ======================================= */
+/* so the navigation bar doesnt collide with header image */
+.subpage-header-pad {
+    padding: 6em 0 0 0;
+    height: 100vh;
+}
+
+.subpage_header_container {
+    background-color:transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    margin: 0 auto;
+
+    width: 85%;
+    height: 80vh;
+    z-index: 0;
+}
+
+.projects_header_bkg {
+    background-image: url('images/orange-flower-sky-blur.jpg');
+}
+
+.subpage-header-content-container {
+    padding: 20% 0 0 14%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: fit-content;
+    max-height:fit-content;
+}
+
+
+.list_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 2em 0 2em 0;
+}
+
+.list_img {
+    display:flex;
+    flex: 1;
+}
+
+.list_img > img {
+    width: 100%;
+}
+
+.list_txt {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    flex: 3;
+}
+
+.list_txt_right {
+    padding: 0 0 0 2em;
+}
+
+.list_txt_left {
+    padding: 0 2em 0 0;
+}
+
+/* ======================================== Hobbies Page ======================================= */
+.hobbies_header_bkg {
+    background-image: url('images/sunflowers.jpg');
+}
+
+/*grid*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.book_img {
+    width: 30%;
+}
+
+.book_img > img {
+    width: 100%;
+}
+
+
+/* =============================== debugging =============================== */
+.debug {
+    border: 1px solid red;
+
+}
