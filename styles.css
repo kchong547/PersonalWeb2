@@ -55,7 +55,7 @@ p {
     border-radius: 15px;
 }
 
-ul {
+ul, ol {
     list-style-position:outside;
 
     /*include the bullet in the padding*/
@@ -71,7 +71,9 @@ ul >li:last-of-type {
 }
 
 .centered {
-    margin: 0 auto; /* object will sit evenly within its parent container!*/
+    margin-left:auto;
+    margin-right:auto;
+    
 }
 
 .dashed-dark {
@@ -94,12 +96,11 @@ ul >li:last-of-type {
 }
 .dark-text-bg {
     padding: 15px;
-    opacity: 80%;
-    background: #0D201B;
+    background: #30413B;
 }
 
 .gray {
-    background-color: #f7f9fb;
+    background-color: #f0f0f0;
     margin-left: calc(50% - 50vw);
 }
 
@@ -118,6 +119,10 @@ ul >li:last-of-type {
 
 .blur-edge {
     box-shadow: 0 0 50px 50px white inset;
+}
+
+.drop_shadow {
+    filter: drop-shadow(4px 4px 3px rgb(198, 198, 198));
 }
 
 /* =============================== navigation menu =============================== */
@@ -351,6 +356,7 @@ ul >li:last-of-type {
 
 .fill-image {
     width: 100%;
+    margin: 0 0 2em 0;
 }
 
 .img_bkg_section {
@@ -541,6 +547,162 @@ a:hover, .dark-link:hover, .nav-link:hover {
     display: none;
 }
 
+/* ======================================== Grid Select Double ======================================= */
+.grid_dbl {
+    height: 90vh;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.grid_dbl_btn_container {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    flex: 1;
+
+    background-color: #f0f0f0;
+}
+
+.grid_dbl_btn
+{
+    border: 0;
+    background: transparent;
+}
+
+.grid_btn_active {
+    border: 5px solid #E8A217;
+}
+
+.grid_dbl_btn_img
+{
+    width: 40%;
+    margin: 0 0 1em 0;
+    cursor: pointer;
+}
+
+.grid_dbl_btn_img_first
+{
+    margin-top: 3em;
+}
+
+.grid_dbl_content_container {
+    display:flex;
+    flex-direction: column;
+    flex: 4;
+}
+
+.grid_dbl_half_container {
+    display: flex;
+    height:100%;
+    justify-content: space-evenly;
+}
+
+.grid_dbl_img_container {
+    height:100%;
+    position: relative;
+}
+
+.grid_page_text {
+    opacity:100%;
+}
+
+.grid_dbl_img {
+    height: 83%;
+    object-fit: contain;
+    opacity: 100%;
+}
+
+.grid_anim_in {
+    animation: grid_in;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    /*animation-keyframe-name animation-duration animation-timing-function*/
+}
+
+.grid_anim_out {
+    animation: grid_out;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    /*animation-keyframe-name animation-duration animation-timing-function*/
+}
+
+@keyframes grid_in {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes grid_out {
+    0% {opacity: 100;}
+    100% {opacity: 0;}
+}
+
+/* ==================================== Grid Select Triple ================================== */
+.grid_trpl_btn_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid_trpl_btn
+{
+    padding: .5em 1em;
+    margin: 1em .5em 0 .5em;
+    border: 2px solid #30413B;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #30413B;
+    white-space: nowrap;
+    cursor: pointer; 
+
+}
+
+.grid_trpl_btn:hover {
+    color: #E8A217;
+    border: 2px solid #E8A217;
+}
+
+.grid_trpl_active  {
+    color: #E8A217;
+    border: 2px solid #E8A217;
+    background-color:  #30413B;
+}
+
+.grid_trpl_content_container {
+    height: 80vh;
+    display:flex;
+    justify-content: column;
+    margin: 3em 0 0 0;
+}
+
+.grid_trpl_sample {
+    flex: 1;
+}
+
+.grid_trpl_half_container {
+    min-width: 0; /*adding this prevents child frm overflowing out of flex parent*/
+    max-width: 100%;
+    margin: 0 0 0 3em;
+    flex:2;
+}
+
+.color_sample {
+    margin: 3em 0 3em 0;
+
+}
+
+.color_palette {
+    max-width: 80%;
+    margin-bottom: 3em;
+}
+
+.grid_trpl_sample_img {
+    min-width: 0;
+    max-width: 100%;
+}
+
 /* =============================== Fade-in animation for text =============================== */
 .small_content, .medium_content, .large_content {
     opacity: 0;
@@ -652,6 +814,10 @@ a:hover, .dark-link:hover, .nav-link:hover {
     width: 100%;
 }
 
+/* ======================================== How it was Made Page ======================================= */
+.how_header_bkg {
+    background-image: url('images/how_bkg.jpg');
+}
 
 /* =============================== debugging =============================== */
 .debug {

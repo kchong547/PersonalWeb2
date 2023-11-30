@@ -138,7 +138,7 @@ dotsNav.addEventListener('click', (e) => {
     const targetSlide = slides[targetIndex];
 
     moveToSlide(track, currentSlide, targetSlide);
-    updateDots(currentDot, targetDot);https://www.twitch.tv/extraemily
+    updateDots(currentDot, targetDot);
     hideShowArrows(slides, targetIndex, prevButton, nextButton);
 
 })
